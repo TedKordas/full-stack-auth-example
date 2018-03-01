@@ -10,7 +10,7 @@ const GET_USER_INFO = 'GET_USER_INFO';
 
 // action creators
 export function getUserInfo() {
-    const userInfo = axios.get('/auth/me').then( res => {
+    let userInfo = axios.get('/auth/me').then( res => {
         return res.data
     })
     return {

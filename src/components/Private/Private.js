@@ -10,6 +10,10 @@ class Private extends Component {
         this.props.getUserInfo();
     }
 
+    bankBalance() {
+        return '$' + Math.floor((Math.random() + 10) * 50000) + '.00';
+    }
+
     render() {
         const loginJSX = (
             this.props.user ?
@@ -20,7 +24,7 @@ class Private extends Component {
                     <p>Username: {this.props.user.user_name}</p>
                     <p>Email: {this.props.user.email}</p>
                     <p>ID: {this.props.user.auth_id}</p>
-                    <h4>Available balance: {'$' + Math.floor((Math.random() + 1) * 100) + '.00'} </h4>
+                    <h4>Available balance: {'$' + Math.floor((Math.random() + 10) * 50000) + '.00'} </h4>
                     <a href={process.env.REACT_APP_LOGOUT}><button>Log out</button></a>
                 </div>
             :
